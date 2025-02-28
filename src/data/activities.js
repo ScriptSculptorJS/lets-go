@@ -32,6 +32,8 @@ export function loadActivityFetch(type) {
       
       saveToStorage();
 
+      document.querySelector('.js-activity-list-button').classList.add('active');
+
       renderActivities();
     })
     .catch((err) => {
