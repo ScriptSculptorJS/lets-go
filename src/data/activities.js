@@ -1,3 +1,5 @@
+import { renderActivities } from '../scripts/activities-card.js';
+
 export let activities = JSON.parse(localStorage.getItem('activities')) || [];
 
 export function saveToStorage() {
@@ -16,7 +18,7 @@ export function removeFromActivities(activityName) {
   activities = newActivities;
 
   saveToStorage();
-}
+};
 
 export function loadActivityFetch() {
   fetch('http://bored.api.lewagon.com/api/activity/')
@@ -25,8 +27,10 @@ export function loadActivityFetch() {
   })
   .then((activityData) => {
     activities.push(activityData.activity);
+    
     saveToStorage();
-    console.log(activities);
+    
+    renderActivities();
   })
   .catch((err) => {
     console.log(err);
