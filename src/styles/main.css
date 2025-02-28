@@ -1,8 +1,9 @@
 .button-container {
   text-align: center;
+  margin-bottom: 40px;
 }
 
-.suggestions-button {
+.activities-button {
   color: hsl(163, 86%, 27%);
   background-color: hsla(0, 0%, 76%, 0.274);
   border: none;
@@ -12,17 +13,17 @@
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
-.suggestions-button:hover {
+.activities-button:hover {
   background-color: hsla(0, 0%, 84%, 0.274);
 }
 
-.suggestions-container {
+.activities-container {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
 
-.suggestions-container .suggestions-card {
+.activities-container .activities-card {
   border: none;
   border-radius: 5px;
   width: 450px;
@@ -30,4 +31,21 @@
   flex-direction: column;
   color: hsla(0, 0%, 0%, 0.791);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.activities-card .activity-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0pc 20px;
+  border-bottom: 1px solid hsla(0, 1%, 50%, 0.432);
+}
+
+.activity-container .delete-button {
+  margin-left: auto;
+  height: 22px;
+  background-color: white;
+  color: hsl(163, 86%, 27%);
+  border: none;
+  border-radius: 50%;
 }

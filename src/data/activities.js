@@ -1,7 +1,21 @@
-export const activities = [];
+export let activities = JSON.parse(localStorage.getItem('activities')) || [];
 
 export function saveToStorage() {
   localStorage.setItem('activities', JSON.stringify(activities));
+}
+
+export function removeFromActivities(activityName) {
+  const newActivities = [];
+
+  activities.forEach((activity) => {
+    if (activity !== activityName) {
+      newActivities.push(activity);
+    }
+  })
+
+  activities = newActivities;
+
+  saveToStorage();
 }
 
 export function loadActivityFetch() {
