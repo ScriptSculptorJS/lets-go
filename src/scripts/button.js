@@ -4,5 +4,7 @@ import { renderActivities } from './activities-card.js';
 renderActivities();
 
 document.querySelector('.js-activities-button').addEventListener('click', async () => {
-  await loadActivityFetch();
+  const type = document.querySelector('.js-dropdown').value;
+  console.log(type);
+  await loadActivityFetch(type);
 });

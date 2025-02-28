@@ -20,19 +20,38 @@ export function removeFromActivities(activityName) {
   saveToStorage();
 };
 
-export function loadActivityFetch() {
-  fetch('http://bored.api.lewagon.com/api/activity/')
-  .then((res) => {
-    return res.json();
-  })
-  .then((activityData) => {
-    activities.push(activityData.activity);
-    
-    saveToStorage();
-    
-    renderActivities();
-  })
-  .catch((err) => {
-    console.log(err);
-  })
+export function loadActivityFetch(type) {
+  if (type === 'any-type') {
+    console.log(type);
+    fetch('http://bored.api.lewagon.com/api/activity/')
+    .then((res) => {
+      return res.json();
+    })
+    .then((activityData) => {
+      activities.push(activityData.activity);
+      
+      saveToStorage();
+
+      renderActivities();
+    })
+    .catch((err) => {
+      console.log(err);
+    })
+  } else {
+    console.log(type);
+    fetch(`http://bored.api.lewagon.com/api/activity?type=${type}`)
+    .then((res) => {
+      return res.json();
+    })
+    .then((activityData) => {
+      activities.push(activityData.activity);
+      
+      saveToStorage();
+
+      renderActivities();
+    })
+    .catch((err) => {
+      console.log(err);
+    })
+  }
 };

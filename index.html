@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="src/styles/body.css">
   <link rel="stylesheet" href="src/styles/header.css">
   <link rel="stylesheet" href="src/styles/main.css">
+  <link rel="stylesheet" href="src/styles/activities-card.css">
   <title>Let's Go</title>
 </head>
 <body>
@@ -17,8 +18,11 @@
 
   <main>
     <div class="button-container">
-      <label for="types">Choose a type:</label>
-      <select name="types">
+      <label for="types" class="choose"><b>Choose a type:</b></label>
+      <select name="types" class="dropdown js-dropdown">
+        <option value="any-type">
+          Any type
+        </option>
         <option value="education">
           Education
         </option>
@@ -53,6 +57,18 @@
     </div>
 
     <div class="activities-container">
+      <div class="tabs-container">
+        <div class="tabs-div">
+          <button class="activity-list-button js-activity-list-button active">
+            Activities
+          </button>
+          <button class="completed-button js-completed-button">
+            Completed
+          </button>
+        </div>
+      </div>
+      
+
       <div class="activities-card js-activities-card">
 
       </div>
