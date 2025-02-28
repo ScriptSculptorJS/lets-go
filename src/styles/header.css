@@ -1,0 +1,13 @@
+header {
+  text-align: center;
+}
+
+header p {
+  font-size: 3em;
+  color: black;
+}
+
+header span {
+  font-size: 1.2em;
+  color: hsl(163, 86%, 27%);
+}
