@@ -1,11 +1,11 @@
-import { loadActivityFetch } from '../data/activities.js';
+import { loadActivityFetch, activities } from '../data/activities.js';
 import { renderActivities } from './activities-card.js';
 
 renderActivities();
 
 document.querySelector('.js-activities-button').addEventListener('click', () => {
   const type = document.querySelector('.js-dropdown').value;
-  console.log(type);
+
   loadActivityFetch(type);
 });
 

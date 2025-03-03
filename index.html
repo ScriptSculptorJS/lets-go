@@ -18,7 +18,7 @@
 
   <main>
     <div class="button-container">
-      <label for="types" class="choose"><b>Choose a type:</b></label>
+      <label for="types" class="choose" id="types"><b>Choose a type:</b></label>
       <select name="types" class="dropdown js-dropdown">
         <option value="any-type">
           Any type
@@ -54,6 +54,9 @@
       <button class="activities-button js-activities-button">
         <b>Get activity</b>
       </button>
+    </div>
+    <div class="alert-container js-alert-container">
+      <p class="activity-exists">Activity already listed below. Try again.</p>
     </div>
 
     <div class="activities-container">

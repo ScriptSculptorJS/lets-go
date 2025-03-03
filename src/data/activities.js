@@ -21,36 +21,71 @@ export function removeFromActivities(activityName) {
 };
 
 export function loadActivityFetch(type) {
+  const alertElement = document.querySelector('.js-alert-container');
+  
+  alertElement.classList.remove('alert');
+
   if (type === 'any-type') {
-    console.log(type);
     fetch('http://bored.api.lewagon.com/api/activity/')
     .then((res) => {
       return res.json();
     })
     .then((activityData) => {
-      activities.push(activityData.activity);
+      let matchingActivity = false;
+
+      activities.forEach((activity) => {
+        if (activity === activityData.activity) {
+          matchingActivity = true;
+        }
+      });
       
-      saveToStorage();
+      if (!matchingActivity) {
+        activities.unshift(activityData.activity);
+      
+        saveToStorage();
 
-      document.querySelector('.js-activity-list-button').classList.add('active');
+        document.querySelector('.js-activity-list-button').classList.add('active');
 
-      renderActivities();
+        renderActivities();
+        
+      }  else if (matchingActivity) {
+        document.querySelector('.js-alert-container').classList.add('alert');
+
+        return;
+      }
     })
     .catch((err) => {
       console.log(err);
     })
+
   } else {
-    console.log(type);
     fetch(`http://bored.api.lewagon.com/api/activity?type=${type}`)
     .then((res) => {
       return res.json();
     })
     .then((activityData) => {
-      activities.push(activityData.activity);
-      
-      saveToStorage();
+      let matchingActivity = false;
 
-      renderActivities();
+      activities.forEach((activity) => {
+        if (activity === activityData.activity) {
+          matchingActivity = true;
+        }
+      });
+      
+      if (!matchingActivity) {
+        activities.unshift(activityData.activity);
+      
+        saveToStorage();
+
+        document.querySelector('.js-activity-list-button').classList.add('active');
+
+        renderActivities();
+
+      }  else if (matchingActivity) {
+        document.querySelector('.js-alert-container').classList.add('alert');
+
+        return;
+      }
     })
     .catch((err) => {
       console.log(err);

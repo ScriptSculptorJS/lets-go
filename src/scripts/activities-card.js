@@ -14,6 +14,8 @@ export function renderActivities() {
 
   document.querySelector('.js-activities-card').innerHTML = html;
 
+  document.querySelector('.js-activity-list-button').classList.add('active');
+
   document.querySelectorAll('.js-delete-button').forEach((button) => {
     button.addEventListener('click', () => {
       const activityName = button.dataset.activityName;

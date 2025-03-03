@@ -1,6 +1,18 @@
 .button-container {
   text-align: center;
+  
+}
+
+.alert-container {
+  text-align: center;
   margin-bottom: 40px;
+  visibility: hidden;
+}
+
+.alert {
+  color: red;
+  font-weight: bold;
+  visibility: visible;
 }
 
 .button-container .choose {
