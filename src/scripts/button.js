@@ -1,6 +1,7 @@
 import { loadActivityFetch, activities } from '../data/activities.js';
 import { renderActivities } from './activities-card.js';
 import { renderCompletedActivities } from './completed-card.js';
+import { completedActivities } from '../data/completed.js';
 
 renderActivities();
 
@@ -12,9 +13,13 @@ document.querySelector('.js-activities-button').addEventListener('click', () => 
 
 const completedTabElement = document.querySelector('.js-completed-button');
 
+completedTabElement.innerHTML = `
+  Completed (${completedActivities.length})
+`;
+
 const activitiesTabElement = document.querySelector('.js-activity-list-button');
 
-const activitiesCardElement = document.querySelector('.js-activities-completed-card');
+
 
 completedTabElement.addEventListener('click', () => {
   activitiesTabElement.classList.remove('active');

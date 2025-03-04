@@ -40,43 +40,9 @@ export function addToCompleted(name, date) {
   
   completedActivities = newArray;
 
+  document.querySelector('.js-completed-button').innerHTML = `
+    Completed (${completedActivities.length})
+  `;
+
   saveCompletedToStorage();
-}
-
-/*function sortArray() {
-  let itemAdded = false;
-  const newArray = [];
-
-  completedActivities.forEach((object) => {
-
-    if (!itemAdded) {
-      newArray.push(object);
-      itemAdded = true;
-
-    } else {
-
-      newArray.forEach((newObject, i) => {
-
-        console.log(object.date, newObject.date)
-        console.log(i);
-
-        if (object.date <= newObject.date) {
-
-          console.log(`${object.date} is less than or equal to ${newObject.date}`)
-          newArray.splice(i, 0, object);
-
-        } else if ( object.date > newObject.date && (newArray.length - 1) === i) {
-
-          newArray.push(object);
-
-        } else {
-
-          console.log(`${object.date} is greater than ${newObject.date}`)
-        }
-      })
-    }
-  }) 
-  console.log(newArray);
-}
-
-sortArray();*/
+};
