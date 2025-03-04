@@ -1,0 +1,12 @@
+.activities-completed-card .completed-container {
+  font-size: 14px;
+}
+
+.activities-completed-card .completed-name {
+  width: 290px;
+}
+
+.activities-completed-card .completed-date {
+  margin-left: auto;
+  font-size: 12px;
+}

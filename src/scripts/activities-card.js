@@ -12,7 +12,7 @@ export function renderActivities() {
     `
   });
 
-  document.querySelector('.js-activities-card').innerHTML = html;
+  document.querySelector('.js-activities-completed-card').innerHTML = html;
 
   document.querySelector('.js-activity-list-button').classList.add('active');
 

@@ -5,6 +5,12 @@
   flex-direction: column;
   margin-top: 20px;
 }
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
 .tabs-container {
   display: flex;
   width: 450px;
@@ -35,7 +41,7 @@
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 5px 0px, rgba(0, 0, 0, 0.15) 0px 0px 1px 0px;
 }
 
-.activities-container .activities-card {
+.activities-container .activities-completed-card {
   border: none;
   border-radius: 5px 0px 5px 5px;
   width: 450px;
@@ -45,11 +51,12 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
-.activities-card .activity-container {
+.activities-completed-card .activity-container,
+.activities-completed-card .completed-container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 0pc 20px;
+  margin: 0px 20px;
   border-bottom: 1px solid hsla(0, 1%, 50%, 0.432);
 }
 
