@@ -60,6 +60,16 @@
   border-bottom: 1px solid hsla(0, 1%, 50%, 0.432);
 }
 
+.empty-activities-message {
+  text-align: center;
+  color: hsl(163, 86%, 27%);
+}
+
+.empty-activities-message p {
+  color: rgba(0, 0, 0, 0.795);
+  margin-bottom: 18.75px;
+}
+
 .checkbox {
   height: 10px;
   margin-right: 10px;

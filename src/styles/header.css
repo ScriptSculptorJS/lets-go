@@ -4,7 +4,7 @@ header {
 
 header p {
   font-size: 3em;
-  color: black;
+  color: rgba(0, 0, 0, 0.887);
 }
 
 header span {

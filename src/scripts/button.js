@@ -27,13 +27,7 @@ completedTabElement.addEventListener('click', () => {
 activitiesTabElement.addEventListener('click', () => {
   completedTabElement.classList.remove('active');
 
-  completedCardElement.classList.add('hidden');
-
   activitiesTabElement.classList.add('active');
-
-  activitiesCardElement.classList.remove('hidden');
 
   renderActivities();
 });
-
-/*document.querySelector('.js-date-popup').showModal();*/

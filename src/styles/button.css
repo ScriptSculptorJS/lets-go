@@ -17,6 +17,11 @@
 
 .button-container .choose {
   font-size: 20px;
+  color: rgba(0, 0, 0, 0.887);
+}
+
+.button-container select {
+  color: rgba(0, 0, 0, 0.795);
 }
 
 .button-container .dropdown {

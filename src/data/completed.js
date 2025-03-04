@@ -1,13 +1,47 @@
-export const completedActivities = [{
-  name: 'Improve your touch typing',
-  date: '02-24-2025'
-}, {
-  name: 'Listen to a new music genre',
-  date: '03-01-2025'
-}, {
-  name: "Plan a vacation you've always wanted to take",
-  date: '01-05-2025'
-}]
+export let completedActivities = JSON.parse(localStorage.getItem('completed')) || [];
+
+export function saveCompletedToStorage() {
+  localStorage.setItem('completed', JSON.stringify(completedActivities));
+}
+
+export function addToCompleted(name, date) {
+  const newArray = completedActivities;
+
+  if (completedActivities.length === 0) {
+    newArray.push({
+      name,
+      date
+    })
+  } else {
+    newArray.forEach((newObject, i) => {
+
+      if (date <= newObject.date) {
+
+        newArray.splice(i, 0, {
+          name,
+          date
+        });
+
+      } else if ( date > newObject.date && (newArray.length - 1) === i) {
+
+        newArray.push({
+          name,
+          date
+        });
+
+      } /*else {
+
+        console.log(`${date} is greater than ${newObject.date}`)
+      }*/
+    });
+
+    
+  }
+  
+  completedActivities = newArray;
+
+  saveCompletedToStorage();
+}
 
 /*function sortArray() {
   let itemAdded = false;
