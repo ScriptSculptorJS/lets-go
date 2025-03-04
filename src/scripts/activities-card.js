@@ -1,5 +1,5 @@
 import { activities, removeFromActivities } from '../data/activities.js';
-import { completedActivities, addToCompleted } from '../data/completed.js';
+import { addToCompleted } from '../data/completed.js';
 
 export function renderActivities() {
   if(activities.length === 0) {
@@ -67,7 +67,6 @@ export function renderActivities() {
             const [year, month, day] = date.split('-');
   
             date = `${month}-${day}-${year}`;
-            console.log(date);
   
             const activityName = checkbox.dataset.completedName;
   
@@ -75,8 +74,6 @@ export function renderActivities() {
 
             removeFromActivities(activityName);
             renderActivities();
-
-            console.log(completedActivities);
   
             datePopupElement.close();
             checkbox.checked = false;
@@ -84,8 +81,6 @@ export function renderActivities() {
   
          
         }
-        
-        console.log(checkbox.dataset.completedName);
       })
     });
 
@@ -99,4 +94,4 @@ export function renderActivities() {
       })
     })
   }
-}
+};

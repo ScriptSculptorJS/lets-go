@@ -29,10 +29,7 @@ export function addToCompleted(name, date) {
           date
         });
 
-      } /*else {
-
-        console.log(`${date} is greater than ${newObject.date}`)
-      }*/
+      }
     });
 
     

@@ -1,4 +1,4 @@
-import { loadActivityFetch, activities } from '../data/activities.js';
+import { loadActivityFetch } from '../data/activities.js';
 import { renderActivities } from './activities-card.js';
 import { renderCompletedActivities } from './completed-card.js';
 import { completedActivities } from '../data/completed.js';
