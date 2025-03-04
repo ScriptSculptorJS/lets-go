@@ -1,0 +1,31 @@
+dialog {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0px;
+  z-index: 100;
+}
+
+.close-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.close-info {
+  padding: 0px 20px 20px 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.close-button {
+  margin-left: auto;
+  height: 22px;
+  background-color: white;
+  color: hsl(163, 86%, 27%);
+  border: none;
+  border-radius: 50%;
+}
+
+h4 {
+  margin: 0px 10px 0px 0px;
+}

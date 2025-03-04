@@ -35,3 +35,5 @@ activitiesTabElement.addEventListener('click', () => {
 
   renderActivities();
 });
+
+/*document.querySelector('.js-date-popup').showModal();*/
