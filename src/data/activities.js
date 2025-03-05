@@ -26,7 +26,7 @@ export function loadActivityFetch(type) {
   alertElement.classList.remove('alert');
 
   if (type === 'any-type') {
-    fetch('http://bored.api.lewagon.com/api/activity/')
+    fetch('https://bored.api.lewagon.com/api/activity/')
     .then((res) => {
       return res.json();
     })
@@ -47,7 +47,7 @@ export function loadActivityFetch(type) {
         document.querySelector('.js-activity-list-button').classList.add('active');
 
         renderActivities();
-        
+
       }  else if (matchingActivity) {
         document.querySelector('.js-alert-container').classList.add('alert');
 
@@ -59,7 +59,7 @@ export function loadActivityFetch(type) {
     })
 
   } else {
-    fetch(`http://bored.api.lewagon.com/api/activity?type=${type}`)
+    fetch(`https://bored.api.lewagon.com/api/activity?type=${type}`)
     .then((res) => {
       return res.json();
     })
