@@ -26,7 +26,7 @@ export function loadActivityFetch(type) {
   alertElement.classList.remove('alert');
 
   if (type === 'any-type') {
-    fetch('https://bored.api.lewagon.com/api/activity/')
+    fetch('//bored.api.lewagon.com/api/activity/')
     .then((res) => {
       return res.json();
     })
@@ -59,7 +59,7 @@ export function loadActivityFetch(type) {
     })
 
   } else {
-    fetch(`https://bored.api.lewagon.com/api/activity?type=${type}`)
+    fetch(`//bored.api.lewagon.com/api/activity?type=${type}`)
     .then((res) => {
       return res.json();
     })
