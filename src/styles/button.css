@@ -1,6 +1,9 @@
 .button-container {
   text-align: center;
-  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .alert-container {
@@ -22,6 +25,7 @@
 
 .button-container select {
   color: rgba(0, 0, 0, 0.795);
+  margin-left: 5px;
 }
 
 .button-container .dropdown {
@@ -38,11 +42,23 @@
   border: none;
   border-radius: 0px 5px 5px 0px;
   padding: 5px 10px;
-  margin-left: -4px;
   font-size: 20px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .activities-button:hover {
   background-color: hsla(0, 0%, 84%, 0.274);
+}
+
+@media (max-width: 500px) {
+  .button-container {
+    width: 340px;
+  }
+
+  .button-container .choose,
+  .button-container .dropdown,
+  .activities-button,
+  .button-container option {
+    font-size: 14px;
+  }
 }

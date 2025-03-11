@@ -42,7 +42,7 @@ export function renderActivities() {
               <h4>
                 When did you complete this activity?  
               </h4>
-              <input type="date" class="js-date-input">
+              <input type="date" class="date-input js-date-input">
             </div> 
             <div class="date-submit-container">
               <button class="date-submit-button js-date-submit-button">Submit</button>

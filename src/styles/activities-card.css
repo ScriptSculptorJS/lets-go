@@ -83,3 +83,19 @@
   border: none;
   border-radius: 50%;
 }
+
+@media (max-width: 500px) {
+  .activities-container .activities-completed-card,
+  .tabs-container {
+    width: 350px;
+  }
+
+  .tabs-container {
+    font-size: 12px;
+  }
+
+  .activity-container,
+  .active {
+    font-size: 14px
+  }
+}

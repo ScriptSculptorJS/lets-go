@@ -10,3 +10,12 @@
   margin-left: auto;
   font-size: 12px;
 }
+
+@media (max-width: 500px) {
+  .activities-completed-card .completed-name {
+    width: 250px;
+  }
+  .activities-completed-card .completed-date {
+    font-size: 10px;
+  }
+}
