@@ -5,6 +5,7 @@ import { completedActivities } from '../data/completed.js';
 
 renderActivities();
 
+// Collects users selected type from dropdown and triggers GET request
 document.querySelector('.js-activities-button').addEventListener('click', () => {
   const type = document.querySelector('.js-dropdown').value;
 
@@ -20,7 +21,7 @@ completedTabElement.innerHTML = `
 const activitiesTabElement = document.querySelector('.js-activity-list-button');
 
 
-
+// Adds styling to compeleted or activities tab to let user know which tab they are currently in
 completedTabElement.addEventListener('click', () => {
   activitiesTabElement.classList.remove('active');
 

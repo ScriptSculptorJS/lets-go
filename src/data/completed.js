@@ -1,9 +1,12 @@
+// Gets user's previous completed activities from their local storage or creates an empty array
 export let completedActivities = JSON.parse(localStorage.getItem('completed')) || [];
 
+// Stores user's current completed array into local storage
 export function saveCompletedToStorage() {
   localStorage.setItem('completed', JSON.stringify(completedActivities));
 }
 
+// Adds activity to completed array and places it in array based on date completed
 export function addToCompleted(name, date) {
   const newArray = completedActivities;
 
@@ -37,6 +40,7 @@ export function addToCompleted(name, date) {
   
   completedActivities = newArray;
 
+  // Updates number of completed activities
   document.querySelector('.js-completed-button').innerHTML = `
     Completed (${completedActivities.length})
   `;

@@ -1,5 +1,6 @@
 import { completedActivities } from '../data/completed.js';
 
+// Generates html for the completed activities
 export function renderCompletedActivities() {
   let html = '';
 
