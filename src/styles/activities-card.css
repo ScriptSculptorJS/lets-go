@@ -63,13 +63,14 @@
 .empty-activities-message {
   text-align: center;
   color: hsl(163, 86%, 27%);
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .empty-activities-message p {
   color: rgba(0, 0, 0, 0.795);
   margin-bottom: 18.75px;
-  padding-left: 15px;
-  padding-right: 15px;
+  
 }
 
 .checkbox {
