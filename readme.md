@@ -20,3 +20,6 @@ Or, you can select a type from the dropdown that currently says Any Type to rece
 If the activity is already in your list, a message will appear to tell you to get an activity again.
 
 You can delete an activity from your Activities list simply by clicking the "x" to the right of the activity.
+
+## Project Status
+Completed
