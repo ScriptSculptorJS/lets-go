@@ -1,5 +1,6 @@
 # [Let's GO!](https://scriptsculptorjs.github.io/lets-go/)
 Can't figure out what to do today? Use Let's GO! and have an activity suggested for you.
+![Let's Go!](src/assets/lets-go-project.png)
 ## Motivation
 There have been times where I haven't known what I wanted to do for the day or on the weekend. I created this app to see suggestions that I may not have thought of before (using the Bored API), and a way to keep track of how many different activities I have completed and when.
 ## Built With
